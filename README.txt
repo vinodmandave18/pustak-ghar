@@ -1,40 +1,100 @@
-Pustak Ghar - Book Store & E-book (HTML, CSS, JavaScript + Razorpay)
+# 📚 Pustak Ghar – Book Store & E-book Platform
 
-FILES
-index.html        customer store          admin.html     admin panel
-js/core.js        database (localStorage), login/auth, helpers
-js/store.js       store logic             js/admin.js    admin logic
-css/style.css, css/admin.css
+Pustak Ghar is an academic web development project that provides an online bookstore experience with paperback books, e-books, customer accounts, shopping cart, order management, and an administrative dashboard.
 
-RUN (Windows, VS Code)
-1. Unzip, open the folder in VS Code (File > Open Folder).
-2. Install the "Live Server" extension. Right-click index.html > Open with Live Server.
-3. Admin panel: open admin.html the same way.
-   Demo admin login:  admin@pustakghar.com  /  Admin@123   (change it in Settings)
+## 🛠️ Technologies Used
 
-DEMO MODE
-Until a Razorpay key is saved, checkout opens a simulated payment window (UPI / card / netbanking).
-It is NOT Razorpay and no money moves. It lets you test the whole flow with no account.
+- HTML
+- CSS
+- JavaScript
+- Razorpay (Test Mode)
+- Browser localStorage
 
-RAZORPAY (real test mode)
-1. razorpay.com > create an account, stay in Test Mode.
-2. Dashboard > Account & Settings > API Keys > Generate Test Key.
-3. Admin panel > Settings > paste the Key Id (rzp_test_...) > Save. Never paste the Key Secret.
-4. Test card 4111 1111 1111 1111, any future expiry, any CVV. Test UPI: success@razorpay
+## ✨ Features
 
-FEATURES
-Customer: register / login / forgot password, profile, change password, search, category filter, sort,
- book detail page, reviews and star ratings (buyers only), wishlist, cart with stock limits, coupon codes,
- shipping and tax rules, Razorpay checkout, order tracking, payment history, printable invoice,
- cancel paperback order, e-book reader with sample, text size and download.
-Admin: dashboard (revenue, 7-day chart, best sellers, low stock), books CRUD + stock + hide/show,
- orders (search, filter, status updates, refund marking), payments (totals, search, CSV),
- users (view, block, promote, delete), coupons CRUD, review moderation, settings (store name,
- Razorpay key, shipping, tax, low-stock level), backup / restore / reset, activity log, CSV exports.
+### Customer Module
+- Customer registration and login
+- Profile and password management
+- Search, category filtering, and sorting
+- Book details, reviews, and star ratings
+- Wishlist and shopping cart
+- Coupon codes, shipping, and tax rules
+- Checkout and order tracking
+- Payment history and printable invoices
+- Paperback order cancellation
+- E-book reader with sample, text-size controls, and download
 
-IMPORTANT LIMITS (write these in your report)
-- All data is kept in the browser's localStorage, so it is a single-browser demo, not a shared database.
-- Password hashing and login run in the browser. A real site needs a server for login and a database.
-- Razorpay is used without server-side order creation and signature verification. Real payments
-  require a backend (Node/Express) to create orders and verify the payment signature.
-- Refunds marked in the admin panel only update records. Send actual refunds from the Razorpay dashboard.
+### Admin Module
+- Dashboard with revenue, sales charts, and best sellers
+- Book management and stock control
+- Order management and status updates
+- Payment records and CSV exports
+- User management
+- Coupon management
+- Review moderation
+- Store settings and backup/restore
+- Activity log
+
+## 📂 Project Structure
+
+```text
+pustak-ghar/
+│
+├── index.html
+├── admin.html
+├── README.md
+│
+├── css/
+│   ├── style.css
+│   └── admin.css
+│
+└── js/
+    ├── core.js
+    ├── store.js
+    └── admin.js
+```
+
+## 🚀 How to Run the Project
+
+1. Download or clone this repository.
+2. Open the project folder in Visual Studio Code.
+3. Install the **Live Server** extension.
+4. Right-click `index.html` and select **Open with Live Server**.
+5. To access the admin panel, open `admin.html` using Live Server.
+
+### Demo Admin Login
+
+- **Email:** `admin@pustakghar.com`
+- **Password:** `Admin@123`
+
+Change the demo password after logging in.
+
+## 💳 Razorpay Integration
+
+The project supports a simulated checkout flow and Razorpay Test Mode.
+
+To configure Razorpay Test Mode:
+
+1. Create an account at [Razorpay](https://razorpay.com/).
+2. Stay in Test Mode.
+3. Generate a Test Key from Account & Settings → API Keys.
+4. Enter the Test Key ID in Admin Panel → Settings.
+5. Never expose your Razorpay Key Secret in frontend code.
+
+**Demo checkout:** If no Razorpay key is configured, a simulated payment window opens. No real money is transferred.
+
+## ⚠️ Project Limitations
+
+- Data is stored in browser localStorage, so it is not a shared database.
+- Authentication and password hashing run in the browser.
+- Real-world applications require secure server-side authentication and a database.
+- Real Razorpay payments require backend order creation and payment signature verification.
+- Refund records in the admin panel are only updated locally. Actual refunds must be processed through Razorpay.
+
+## 🎓 Project Information
+
+**Project Name:** Pustak Ghar – Book Store & E-book Platform
+
+**Project Type:** Academic Web Development Project
+
+**Purpose:** To develop an online bookstore interface with customer and administrative features.
